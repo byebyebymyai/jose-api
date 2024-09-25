@@ -20,17 +20,3 @@ jobs:
       contents: read
       packages: write
       id-token: write
-  rbac-api:
-    uses: ./.github/workflows/go.yaml
-    with:
-      actor: ${{ github.actor }}
-      go-version: "1.22"
-      repository: ${{ github.repository }}
-      base-path: rbac-api
-      event_name: ${{ github.event_name }}
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
-    permissions:
-      contents: read
-      packages: write
-      id-token: write
